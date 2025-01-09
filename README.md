@@ -14,21 +14,20 @@ Database: MongoDB (NoSQL Database)
 
 ## Setup Instructions
 ### Prerequisites
-Install Python: Download Python
-Install MongoDB: Download MongoDB
-Install virtualenv for virtual environment management
-pip install Flask flask-pymongo flask-restful pytest
-python -m venv venv
-venv\Scripts\activate   
-
-
+1. Install Python: Download Python
+2. Install MongoDB: Download MongoDB
+3. Install virtualenv for virtual environment management
+4. pip install virtualenv
+5. python -m virtualenv env
+6. .\env\Scripts\activate.ps1    
+7. pip install Flask flask-pymongo flask-restful pytest
 
 
 ## API Endpoints
 ### Add a New To-Do Task
-URL: /api/todos
-1.Method: POST
-2.Description: Adds a new to-do task to the database.
+#### URL: /api/todos
+#### Method: POST
+#### Description: Adds a new to-do task to the database.
 
 Request Body (JSON):
 
@@ -45,9 +44,10 @@ Response (JSON):
 
 
 ### Get All To-Do Tasks
-URL: /api/todos
-Method: GET
-Description: Fetches a list of all to-do tasks in the database.
+#### URL: /api/todos
+#### Method: GET
+#### Description: Fetches a list of all to-do tasks in the database.
+
 Response (JSON):
 [
     {
@@ -67,6 +67,7 @@ Response (JSON):
 #### URL: /api/todos/<id>
 #### Method: PUT
 #### Description: Edits the details of an existing to-do task.
+
 Request Body (JSON):
 {
     "title": "Updated Task Title",
@@ -103,5 +104,5 @@ Response (JSON):
 
 
 ## Test cases
-pip install pytest
-pytest tests/
+### pip install pytest
+### pytest tests/
