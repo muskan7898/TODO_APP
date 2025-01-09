@@ -23,6 +23,7 @@ Get All To-Do Tasks
 '''
 @todo_bp.route('/todos', methods=['GET'])
 def get_todos():
+    print("REQUEST TO GET ALL TODOS")
     todos = mongo.db.todos.find()
     result = [{"id": str(todo["_id"]), "title": todo["title"], "description": todo["description"]} for todo in todos]
     return jsonify(result)
