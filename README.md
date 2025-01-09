@@ -104,3 +104,9 @@ Response (JSON):
 ## Test cases
 #### pip install pytest
 #### pytest tests/
+##### tests
+1. test_add_todo: Tests the /api/todos POST route by adding a new todo.
+2. test_get_todos: Tests the /api/todos GET route by retrieving all todos.
+3. test_update_todo: Tests the /api/todos/<id> PUT route to update an existing todo.
+4. test_delete_todo: Tests the /api/todos/<id> DELETE route to delete a specific todo.
+5. test_delete_all_todos: Tests the /api/todos DELETE route to delete all todos.
