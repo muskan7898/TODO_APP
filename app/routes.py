@@ -28,7 +28,8 @@ def get_todos():
     return jsonify(result)
 
 
-''' update todo by id
+''' 
+Update todo by id
 '''
 @todo_bp.route('/todos/<string:id>', methods=['PUT'])
 def update_todo(id):
@@ -73,17 +74,17 @@ def update_todo(id):
         # Handle unexpected errors
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500
 
-'''Delete a To-Do Task
 '''
-
+Delete a To-Do Task
+'''
 @todo_bp.route('/todos/<string:id>', methods=['DELETE'])
 def delete_todo(id):
     mongo.db.todos.delete_one({"_id": ObjectId(id)})
     return jsonify({"message": "Todo deleted successfully!"})
 
 '''
-delete All To-Do Tasks'''
-
+Delete All To-Do Tasks
+'''
 @todo_bp.route('/todos', methods=['DELETE'])
 def delete_all_todos():
     mongo.db.todos.delete_many({})
