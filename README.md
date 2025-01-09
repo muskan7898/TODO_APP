@@ -24,6 +24,7 @@ Database: MongoDB (NoSQL Database)
 
 
 ## API Endpoints
+1. 
 ### Add a New To-Do Task
 #### URL: /api/todos
 #### Method: POST
@@ -42,7 +43,7 @@ Response (JSON):
     "id": "63e1234567890abcd1234567"
 }
 
-
+2. 
 ### Get All To-Do Tasks
 #### URL: /api/todos
 #### Method: GET
@@ -62,7 +63,7 @@ Response (JSON):
     }
 ]
 
-
+3.  
 ### Edit a To-Do Task
 #### URL: /api/todos/<id>
 #### Method: PUT
@@ -81,6 +82,7 @@ Response (JSON):
 }
 
 
+4. 
 ### Delete a To-Do Task
 #### URL: /api/todos/<id>
 #### Method: DELETE
@@ -91,7 +93,7 @@ Response (JSON):
     "message": "Todo deleted successfully!"
 }
 
-
+5. 
 ### Delete All To-Do Tasks
 #### URL: /api/todos
 #### Method: DELETE
@@ -101,6 +103,7 @@ Response (JSON):
 {
     "message": "All todos deleted successfully!"
 }
+
 
 
 ## Test cases
